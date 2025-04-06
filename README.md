@@ -46,6 +46,16 @@ Roles are assigned at login, and protected routes ensure that users access only 
 ## 🛠️ How to Run This Project
 
 ### 📂 Clone the Repository
+cd backend
+npm install
+npm start
+# Create a .env file and add your MongoDB URI and JWT secret
+npm run dev
+cd Frontend
+npm install
+npm run dev
+# Create a .env file and add your MongoDB URI and JWT secret
+npm run dev
 
 ```bash
 git clone https://github.com/ankitjiyadav/Incityinfo
