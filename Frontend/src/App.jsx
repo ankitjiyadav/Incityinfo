@@ -11,12 +11,14 @@ import RecentActivity from "./components/RecentActivity";
 import AdminDashboard from "./pages/AdminDashboard ";
 import AdminLayout from "./components/AdminLayout ";
 import AdminSidebar from "./pages/AdminSidebar";
+import TelecallerDashboard from "./pages/TelecallerDashboard";
 
 function App() {
+  
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
-      <Route path="/dashboard" element={<ProtectedRoute role="admin"><DashboardPage /></ProtectedRoute>} />
+      <Route path="/dashboardpage" element={<ProtectedRoute role="admin"><DashboardPage /></ProtectedRoute>} />
       <Route path="/telecaller" element={<ProtectedRoute role="telecaller"><TelecallerPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFound />} />
       <Route path="/register" element={<RegisterPage/>}/>
@@ -25,14 +27,10 @@ function App() {
       <Route path="/recentActivity" element={<RecentActivity/>}/>
       <Route path="/adminDashboard" element={<AdminDashboard/>} />
       <Route path="/adminLayout" element={<AdminLayout/>} />
-      <Route
-        path="/adminSidebar"
-        element={
-          <AdminSidebar>
-            <AdminDashboard /> 
-          </AdminSidebar>
-        }
-      />    </Routes>
+      <Route  path="/adminSidebar" element={<AdminSidebar><AdminDashboard /></AdminSidebar>}/> 
+      <Route path="/telecallerDashboard" element={<TelecallerDashboard/>} />
+  
+       </Routes>
   );
 }
 

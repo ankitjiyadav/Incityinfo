@@ -32,7 +32,7 @@ const handleLogin = async (e) => {
     login(user); // ✅ context me user set
 
     if (user.role === "admin") navigate("/adminSidebar");
-    else if (user.role === "telecaller") navigate("/telecaller");
+    else if (user.role === "telecaller") navigate("/telecallerDashboard");
     else setError("Unknown role");
   } catch (err) {
     setError(err.response?.data?.message || "Login failed");

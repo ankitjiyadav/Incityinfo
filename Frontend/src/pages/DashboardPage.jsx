@@ -13,7 +13,7 @@ const DashboardPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:5000/api/admin/dashboard");
+      const res = await axios.get("https://incityinfo.onrender.com/admin/dashboard");
       setMetrics(res.data.metrics);
       setRecent(res.data.recentActivities);
       setConnectedCalls(res.data.connectedCalls);
